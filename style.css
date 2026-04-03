@@ -7,7 +7,7 @@ body {
 
 img {
   max-width: 100%;
-  width: min(100%, 1000px);
+  width: min(100%, 500px);
   height: auto;
   display: block;
   margin: 1rem auto;
