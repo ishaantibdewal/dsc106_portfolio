@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ishaan - Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,99 +17,103 @@
       <li><a href="portfolio.html" class="current">Resume</a></li>
     </ul>
   </nav>
-  <header>
-    <h1>Ishaan Tibdewal</h1>
-    <p>
-      Email: itibdewal@ucsd.edu |
-      <a href="https://www.linkedin.com/in/ishaantibdewal" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/ishaantibdewal" target= "_blank">GitHub</a>
-    </p>
-  </header>
 
-  <!-- Education -->
-  <section>
-    <h2>Education</h2>
-
-    <article>
-      <header>
-        <h3>University of California, San Diego</h3>
-        <p>
-          <time datetime="2023">2023</time> –
-          <time datetime="2027">2027</time>
-        </p>
-      </header>
-      <p>Bachelor’s Degree in Data Science and Applied Mathematics</p>
-    </article>
-
-  </section>
-
-  <!-- Experience -->
-  <section>
-    <h2>Experience</h2>
-
-    <article>
-      <header>
-        <h3>VP of Research & Development – Sustainable Investment Group</h3>
-        <p>
-          <time datetime="2025">2025</time> – Present
-        </p>
-      </header>
-      <ul>
-        <li>Led development of an ESG-focused portfolio optimizer</li>
-        <li>Applied financial theory and data analysis to investment strategies</li>
-        <li>Worked with Python and financial datasets to evaluate performance</li>
-      </ul>
-    </article>
-
-    <article>
-      <header>
-        <h3>Research Assistant – Data / Statistics Lab</h3>
-      </header>
-      <ul>
-        <li>Analyzed datasets using R and statistical models</li>
-        <li>Cleaned and merged large datasets for research use</li>
-        <li>Built regression models and visualizations</li>
-      </ul>
-    </article>
-
-  </section>
-
-  <!-- Projects -->
-  <section>
-    <h2>Projects</h2>
-
-    <article>
-      <h3>ESG Portfolio Optimizer</h3>
-      <p>
-        Built an optimization system integrating ESG scores with financial returns.
-        <a href="https://github.com/ishaantibdewal/esg-portfolio-optimizer" target="_blank">GitHub</a>
+  <main class="resume">
+    <header class="resume-header">
+      <h1>Ishaan Tibdewal</h1>
+      <p class="resume-subtitle">Data Science • Applied Mathematics • Research • Finance</p>
+      <p class="contact-line">
+        <a href="mailto:itibdewal@ucsd.edu">itibdewal@ucsd.edu</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/ishaantibdewal" target="_blank">LinkedIn</a>
+        <span>•</span>
+        <a href="https://github.com/ishaantibdewal" target="_blank">GitHub</a>
       </p>
-    </article>
+    </header>
 
-    <article>
-      <h3>Sentiment Classification Model</h3>
-      <p>
-        Implemented deep learning models (DAN, BOW) for sentiment analysis.
-      </p>
-    </article>
+    <section>
+      <h2>Education</h2>
+      <article>
+        <header>
+          <h3>University of California, San Diego</h3>
+          <p><time datetime="2023">2023</time> – <time datetime="2027">2027</time></p>
+        </header>
+        <p>Bachelor’s Degree in Data Science and Applied Mathematics</p>
+      </article>
+    </section>
 
-  </section>
+    <section>
+      <h2>Experience</h2>
 
-  <!-- Skills -->
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Python (NumPy, Pandas, yfinance)</li>
-      <li>R (dplyr, ggplot2)</li>
-      <li>Machine Learning & Data Analysis</li>
-      <li>Financial Modeling</li>
-      <li>SQL (PostgreSQL, SQLite)</li>
-    </ul>
-  </section>
+      <article>
+        <header>
+          <h3>VP of Research & Development, Sustainable Investment Group</h3>
+          <p><time datetime="2025">2025</time> – Present</p>
+        </header>
+        <ul>
+          <li>Led development of an ESG-focused portfolio optimizer</li>
+          <li>Applied financial theory and data analysis to investment strategies</li>
+          <li>Worked with Python and financial datasets to evaluate performance</li>
+        </ul>
+      </article>
 
-  
+      <article>
+        <header>
+          <h3>Research Assistant, Data / Statistics Lab</h3>
+          <p>2026 - Present</p>
+        </header>
+        <ul>
+          <li>Analyzed datasets using R and statistical models</li>
+          <li>Cleaned and merged large datasets for research use</li>
+          <li>Built regression models and visualizations</li>
+        </ul>
+      </article>
+    </section>
 
-  
+    <section>
+      <h2>Projects</h2>
+
+      <article>
+        <header>
+          <h3>ESG Portfolio Optimizer</h3>
+          <p>Finance + Data + Sustainability</p>
+        </header>
+        <p>
+          Built an optimization system integrating ESG scores with financial returns.
+          <a href="https://github.com/ishaantibdewal/esg-portfolio-optimizer" target="_blank">View Project</a>
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h3>Sentiment Classification Model</h3>
+          <p>Machine Learning Project</p>
+        </header>
+        <p>
+          Implemented deep learning models including DAN and BOW for sentiment analysis.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>NumPy</li>
+        <li>Pandas</li>
+        <li>yfinance</li>
+        <li>R</li>
+        <li>dplyr</li>
+        <li>ggplot2</li>
+        <li>Machine Learning</li>
+        <li>Data Analysis</li>
+        <li>Financial Modeling</li>
+        <li>SQL</li>
+        <li>PostgreSQL</li>
+        <li>SQLite</li>
+      </ul>
+    </section>
+  </main>
 
 </body>
 </html>
