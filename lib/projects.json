@@ -1,0 +1,88 @@
+[
+  {
+    "title": "DSC 106 Portfolio",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A personal portfolio website for DSC 106 that showcases projects, GitHub data, navigation, theming, and reusable JavaScript rendering.",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio"
+  },
+  {
+    "title": "DSC 106 Project 2",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A DSC 106 data visualization project built in a Jupyter Notebook workflow for exploring, analyzing, and presenting data.",
+    "url": "https://github.com/ishaantibdewal/dsc106_project2"
+  },
+  {
+    "title": "ESG Portfolio Optimizer",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A finance project developed for SIG that explores portfolio optimization with ESG considerations and investment analysis.",
+    "url": "https://github.com/ishaantibdewal/esg-portfolio-optimizer"
+  },
+  {
+    "title": "NBA Draft Predictor",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A predictive modeling project that uses basketball and draft-related data to estimate future NBA draftee performance.",
+    "url": "https://github.com/ishaantibdewal/NBA-Draft-Predictor"
+  },
+  {
+    "title": "Rate The Review",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "An NLP project that predicts ratings from recipe review text and explores how language patterns relate to user scores.",
+    "url": "https://github.com/ishaantibdewal/Rate-The-Review"
+  },
+  {
+    "title": "Image and Audio Processing Toolkit",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A Python toolkit with reusable classes and modules for image processing, audio processing, and computational media experiments.",
+    "url": "https://github.com/ishaantibdewal/image-audio-processing-toolkit"
+  },
+  {
+    "title": "Taylor Swift Song Recommender",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A music data project that explores recommendation ideas using Taylor Swift song information and notebook-based analysis.",
+    "url": "https://github.com/ishaantibdewal/taylor-swift-song-recommender"
+  },
+  {
+    "title": "Git Exercise: Conflicts",
+    "year": 2025,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A GitHub skills exercise focused on understanding merge conflicts, repository history, and collaborative version control workflows.",
+    "url": "https://github.com/ishaantibdewal/GitExercise_Conflicts"
+  },
+  {
+    "title": "GitHub Profile Repository",
+    "year": 2026,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A profile repository used to customize and maintain public GitHub profile content, documentation, and personal project links.",
+    "url": "https://github.com/ishaantibdewal/ishaantibdewal"
+  },
+
+  {
+    "title": "Introduction to GitHub",
+    "year": 2025,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A GitHub skills repository for practicing core repository concepts, commits, branches, pull requests, and project collaboration.",
+    "url": "https://github.com/ishaantibdewal/skills-introduction-to-github"
+  },
+  {
+    "title": "Resolve Merge Conflicts",
+    "year": 2025,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A GitHub skills repository for learning how merge conflicts happen and how to resolve competing file changes cleanly.",
+    "url": "https://github.com/ishaantibdewal/skills-resolve-merge-conflicts"
+  },
+  {
+    "title": "Review Pull Requests",
+    "year": 2025,
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "A GitHub skills repository focused on reviewing pull requests, giving feedback, and understanding collaborative code review.",
+    "url": "https://github.com/ishaantibdewal/skills-review-pull-requests"
+  }
+  
+]

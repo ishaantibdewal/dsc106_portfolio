@@ -4,6 +4,50 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+export async function fetchJSON(url) {
+  let response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch JSON from ${url}: ${response.status}`);
+  }
+
+  return await response.json();
+}
+
+export async function fetchGitHubData(username) {
+  return await fetchJSON(`https://api.github.com/users/${username}`);
+}
+
+export function renderProjects(projects, containerElement, headingLevel = "h2") {
+  if (!containerElement) {
+    return;
+  }
+
+  let validHeadingLevels = ["h1", "h2", "h3", "h4", "h5", "h6"];
+  let heading = validHeadingLevels.includes(headingLevel) ? headingLevel : "h2";
+
+  containerElement.innerHTML = "";
+
+  if (!Array.isArray(projects) || projects.length === 0) {
+    let message = document.createElement("p");
+    message.textContent = "No projects available.";
+    containerElement.appendChild(message);
+    return;
+  }
+
+  for (let project of projects) {
+    let article = document.createElement("article");
+
+    article.innerHTML = `
+      <${heading}>${project.title ?? "Untitled project"}</${heading}>
+      <img src="${project.image ?? ""}" alt="${project.title ?? "Project image"}">
+      <p>${project.description ?? ""}</p>
+    `;
+
+    containerElement.appendChild(article);
+  }
+}
+
 const pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
@@ -58,6 +102,7 @@ document.body.insertAdjacentHTML(
 );
 
 let select = document.querySelector(".color-scheme select");
+let defaultColorScheme = "light";
 
 function setColorScheme(colorScheme) {
   document.documentElement.style.setProperty("color-scheme", colorScheme);
@@ -72,6 +117,8 @@ select.addEventListener("input", function (event) {
 
 if ("colorScheme" in localStorage) {
   setColorScheme(localStorage.colorScheme);
+} else {
+  setColorScheme(defaultColorScheme);
 }
 
 let form = document.querySelector("form");

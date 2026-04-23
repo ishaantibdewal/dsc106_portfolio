@@ -1,5 +1,5 @@
 html {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 :root {
@@ -149,6 +149,35 @@ h1 {
 
 .projects p {
   margin: 0;
+}
+
+#profile-stats {
+  margin-block: 1em 2em;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  border: 1px solid oklch(85% 3% 200);
+  background: oklch(85% 3% 200);
+}
+
+#profile-stats dt,
+#profile-stats dd {
+  margin: 0;
+  padding: 0.75em;
+  background: canvas;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: 700;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  font-size: 1.5rem;
 }
 
 /* ---------- RESUME PAGE ---------- */

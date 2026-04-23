@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ishaan Tibdewal: Personal site and portfolio</title>
+    <script>
+      document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme || "light");
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,8 +15,15 @@
     <h1>Ishaan Tibdewal</h1>
     <p>Welcome to my personal site and portfolio! I enjoy building projects at the intersection of data, finance, and real-world decision-making. My work focuses on turning messy, real-world datasets into clear insights, models, and tools using sound statistical and computational methods. I have experience working on solo, pair, and team-based projects, and I value clear attribution, reproducibility, and clean documentation.</p>
     <img src="images/nyc.JPG" alt="A picture of New York City from my spring break trip">
+
+    <h2>GitHub Stats</h2>
+    <div id="profile-stats"></div>
+
+    <h2>Latest Projects</h2>
+    <div class="projects"></div>
     
 
     <script src="global.js" type="module"></script>   
+    <script src="index.js" type="module" defer></script>
 </body>
 </html>
