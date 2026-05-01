@@ -278,9 +278,12 @@ h1 {
 
 #projects-plot {
   flex: 0 0 14em;
+  block-size: 14em;
+  height: 14em;
   inline-size: 14em;
   max-width: 100%;
   overflow: visible;
+  width: 14em;
 }
 
 #projects-plot path {
