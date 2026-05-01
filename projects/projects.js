@@ -7,6 +7,8 @@ const searchInput = document.querySelector(".searchBar");
 const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 const colors = d3.scaleOrdinal(d3.schemeTableau10);
 let query = "";
+// Old bug: tracking the selected slice by index broke when search changed the slice order.
+// let selectedIndex = -1;
 let selectedYear = null;
 let currentYearData = [];
 
@@ -23,6 +25,8 @@ function getYearData(projects) {
 }
 
 function updateSelection(projects) {
+  // Old bug: filtering by year started from all projects, so it ignored the search query.
+  // let visibleProjects = selectedIndex === -1 ? projects : projects.filter((project) => project.year === data[selectedIndex].label);
   let searchFilteredProjects = filterProjects(projects);
   let visibleProjects =
     selectedYear === null
@@ -63,6 +67,8 @@ function renderPieChart(data, projects) {
     .attr("fill", (_, idx) => colors(idx))
     .attr("class", (d) => (d.data.label === selectedYear ? "selected" : null))
     .on("click", (_, d) => {
+      // Old bug: this stored the clicked slice position instead of the actual year.
+      // selectedIndex = selectedIndex === idx ? -1 : idx;
       selectedYear = selectedYear === d.data.label ? null : d.data.label;
       updateSelection(projects);
     });
@@ -74,6 +80,8 @@ function renderPieChart(data, projects) {
     .attr("style", (_, idx) => `--color:${colors(idx)}`)
     .attr("class", (d) => (d.label === selectedYear ? "legend-item selected" : "legend-item"))
     .on("click", (_, d) => {
+      // Old bug: this stored the clicked legend position instead of the actual year.
+      // selectedIndex = selectedIndex === idx ? -1 : idx;
       selectedYear = selectedYear === d.label ? null : d.label;
       updateSelection(projects);
     })
@@ -102,6 +110,8 @@ try {
 
   searchInput?.addEventListener("input", (event) => {
     query = event.target.value;
+    // Old bug: typing in search cleared the selected pie slice, so both filters could not stay active.
+    // selectedIndex = -1;
     renderFilteredProjects(projects);
   });
 
