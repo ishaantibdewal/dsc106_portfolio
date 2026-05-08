@@ -1,0 +1,802 @@
+[
+  {
+    "id": "c382a9eadcdb347e205ce4008b1b34e5b4d2f810",
+    "shortId": "c382a9e",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/c382a9eadcdb347e205ce4008b1b34e5b4d2f810",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "Use local D3 for projects chart",
+    "date": "2026-04-30",
+    "time": "21:33:12",
+    "timezone": "-07:00",
+    "datetime": "2026-04-30T21:33:12-07:00",
+    "hourFrac": 21.55,
+    "totalLines": 10,
+    "lines": [
+      {
+        "file": "projects/projects.js",
+        "type": "js",
+        "added": 10,
+        "deleted": 0,
+        "changedLines": 10
+      }
+    ]
+  },
+  {
+    "id": "5b93920489f3b2a419037a41b1736496e178df97",
+    "shortId": "5b93920",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/5b93920489f3b2a419037a41b1736496e178df97",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "Use local D3 for projects chart",
+    "date": "2026-04-30",
+    "time": "21:18:53",
+    "timezone": "-07:00",
+    "datetime": "2026-04-30T21:18:53-07:00",
+    "hourFrac": 21.3,
+    "totalLines": 5,
+    "lines": [
+      {
+        "file": "lib/d3.min.js",
+        "type": "js",
+        "added": 2,
+        "deleted": 0,
+        "changedLines": 2
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "projects/projects.js",
+        "type": "js",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "668272b0bcb558e2359eae59560fbcf422b70deb",
+    "shortId": "668272b",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/668272b0bcb558e2359eae59560fbcf422b70deb",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "graph visible",
+    "date": "2026-04-30",
+    "time": "21:14:42",
+    "timezone": "-07:00",
+    "datetime": "2026-04-30T21:14:42-07:00",
+    "hourFrac": 21.233333333333334,
+    "totalLines": 5,
+    "lines": [
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 3,
+        "deleted": 0,
+        "changedLines": 3
+      }
+    ]
+  },
+  {
+    "id": "dd1fc6b4421c8ab2764649eb211acb73143adc5a",
+    "shortId": "dd1fc6b",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/dd1fc6b4421c8ab2764649eb211acb73143adc5a",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "d3 graph",
+    "date": "2026-04-30",
+    "time": "21:09:27",
+    "timezone": "-07:00",
+    "datetime": "2026-04-30T21:09:27-07:00",
+    "hourFrac": 21.15,
+    "totalLines": 201,
+    "lines": [
+      {
+        "file": ".gitignore",
+        "type": "gitignore",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "global.js",
+        "type": "js",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 1,
+        "changedLines": 11
+      },
+      {
+        "file": "projects/projects.js",
+        "type": "js",
+        "added": 98,
+        "deleted": 3,
+        "changedLines": 101
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 86,
+        "deleted": 1,
+        "changedLines": 87
+      }
+    ]
+  },
+  {
+    "id": "d1ff483386eea1fcdc5f23310a1863af4d2d9249",
+    "shortId": "d1ff483",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/d1ff483386eea1fcdc5f23310a1863af4d2d9249",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "lab4 changes",
+    "date": "2026-04-22",
+    "time": "19:52:21",
+    "timezone": "-07:00",
+    "datetime": "2026-04-22T19:52:21-07:00",
+    "hourFrac": 19.866666666666667,
+    "totalLines": 277,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 4,
+        "deleted": 1,
+        "changedLines": 5
+      },
+      {
+        "file": "global.js",
+        "type": "js",
+        "added": 48,
+        "deleted": 1,
+        "changedLines": 49
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 0,
+        "changedLines": 10
+      },
+      {
+        "file": "index.js",
+        "type": "js",
+        "added": 21,
+        "deleted": 0,
+        "changedLines": 21
+      },
+      {
+        "file": "lib/projects.json",
+        "type": "json",
+        "added": 88,
+        "deleted": 0,
+        "changedLines": 88
+      },
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 4,
+        "deleted": 1,
+        "changedLines": 5
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 7,
+        "deleted": 39,
+        "changedLines": 46
+      },
+      {
+        "file": "projects/projects.js",
+        "type": "js",
+        "added": 20,
+        "deleted": 0,
+        "changedLines": 20
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 31,
+        "deleted": 2,
+        "changedLines": 33
+      }
+    ]
+  },
+  {
+    "id": "0acc64d908e67e66c580fa65c96c059bbc8aa5e4",
+    "shortId": "0acc64d",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/0acc64d908e67e66c580fa65c96c059bbc8aa5e4",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "lab3 changes",
+    "date": "2026-04-17",
+    "time": "10:41:46",
+    "timezone": "-07:00",
+    "datetime": "2026-04-17T10:41:46-07:00",
+    "hourFrac": 10.683333333333334,
+    "totalLines": 203,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 4,
+        "deleted": 16,
+        "changedLines": 20
+      },
+      {
+        "file": "global.js",
+        "type": "js",
+        "added": 92,
+        "deleted": 0,
+        "changedLines": 92
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 4,
+        "deleted": 9,
+        "changedLines": 13
+      },
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 3,
+        "deleted": 11,
+        "changedLines": 14
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 4,
+        "deleted": 10,
+        "changedLines": 14
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 32,
+        "deleted": 18,
+        "changedLines": 50
+      }
+    ]
+  },
+  {
+    "id": "a0f2d6866a70fb836679daf67f16944a1d6c9d04",
+    "shortId": "a0f2d68",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/a0f2d6866a70fb836679daf67f16944a1d6c9d04",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "projects and resume styled",
+    "date": "2026-04-09",
+    "time": "13:27:30",
+    "timezone": "-07:00",
+    "datetime": "2026-04-09T13:27:30-07:00",
+    "hourFrac": 13.45,
+    "totalLines": 439,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 19,
+        "deleted": 7,
+        "changedLines": 26
+      },
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 92,
+        "deleted": 87,
+        "changedLines": 179
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 54,
+        "deleted": 16,
+        "changedLines": 70
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 164,
+        "deleted": 0,
+        "changedLines": 164
+      }
+    ]
+  },
+  {
+    "id": "f681a2d52151201671ecb6ce6f3c5d7149f89dc7",
+    "shortId": "f681a2d",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/f681a2d52151201671ecb6ce6f3c5d7149f89dc7",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "nav bars added",
+    "date": "2026-04-09",
+    "time": "12:36:59",
+    "timezone": "-07:00",
+    "datetime": "2026-04-09T12:36:59-07:00",
+    "hourFrac": 12.6,
+    "totalLines": 96,
+    "lines": [
+      {
+        "file": ".DS_Store",
+        "type": "ds_store",
+        "added": 0,
+        "deleted": 0,
+        "changedLines": 0
+      },
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 9,
+        "changedLines": 19
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 5,
+        "deleted": 4,
+        "changedLines": 9
+      },
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 9,
+        "changedLines": 19
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 3,
+        "deleted": 2,
+        "changedLines": 5
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 44,
+        "deleted": 0,
+        "changedLines": 44
+      }
+    ]
+  },
+  {
+    "id": "f0264cb4a8c3e8b14e22a83458f76ff8f529ac9e",
+    "shortId": "f0264cb",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/f0264cb4a8c3e8b14e22a83458f76ff8f529ac9e",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "fixes",
+    "date": "2026-04-03",
+    "time": "11:26:31",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T11:26:31-07:00",
+    "hourFrac": 11.433333333333334,
+    "totalLines": 2,
+    "lines": [
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "0766560490c8de216a50b14c9d982174da5da28a",
+    "shortId": "0766560",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/0766560490c8de216a50b14c9d982174da5da28a",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "image size",
+    "date": "2026-04-03",
+    "time": "10:32:01",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:32:01-07:00",
+    "hourFrac": 10.533333333333333,
+    "totalLines": 2,
+    "lines": [
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "f3658dca3cb1e3e8ce45fda1ab7800c1a456a4a4",
+    "shortId": "f3658dc",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/f3658dca3cb1e3e8ce45fda1ab7800c1a456a4a4",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "image size",
+    "date": "2026-04-03",
+    "time": "10:29:55",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:29:55-07:00",
+    "hourFrac": 10.483333333333333,
+    "totalLines": 2,
+    "lines": [
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "0e3d6cc1f1b22e72af5c96b2b7259aed4c3effe7",
+    "shortId": "0e3d6cc",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/0e3d6cc1f1b22e72af5c96b2b7259aed4c3effe7",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "nav links in the end",
+    "date": "2026-04-03",
+    "time": "10:27:54",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:27:54-07:00",
+    "hourFrac": 10.45,
+    "totalLines": 20,
+    "lines": [
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 10,
+        "changedLines": 20
+      }
+    ]
+  },
+  {
+    "id": "958ea81756ec40b32937e980f71e504300a42f9b",
+    "shortId": "958ea81",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/958ea81756ec40b32937e980f71e504300a42f9b",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "nav links in resume",
+    "date": "2026-04-03",
+    "time": "10:26:18",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:26:18-07:00",
+    "hourFrac": 10.433333333333334,
+    "totalLines": 15,
+    "lines": [
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 14,
+        "deleted": 1,
+        "changedLines": 15
+      }
+    ]
+  },
+  {
+    "id": "9cdacc11335e14dd450d66fc802042074c869a84",
+    "shortId": "9cdacc1",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/9cdacc11335e14dd450d66fc802042074c869a84",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "bug fixes",
+    "date": "2026-04-03",
+    "time": "10:12:03",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:12:03-07:00",
+    "hourFrac": 10.2,
+    "totalLines": 6,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 2,
+        "deleted": 2,
+        "changedLines": 4
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "d80cfe17927d73daa91f53899ec6efa3ad70237e",
+    "shortId": "d80cfe1",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/d80cfe17927d73daa91f53899ec6efa3ad70237e",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "resume added",
+    "date": "2026-04-03",
+    "time": "10:08:28",
+    "timezone": "-07:00",
+    "datetime": "2026-04-03T10:08:28-07:00",
+    "hourFrac": 10.133333333333333,
+    "totalLines": 107,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 2,
+        "deleted": 1,
+        "changedLines": 3
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "portfolio.html",
+        "type": "html",
+        "added": 100,
+        "deleted": 0,
+        "changedLines": 100
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 1,
+        "deleted": 1,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "8276263727ad9128c371a3e85075852ad5374ee0",
+    "shortId": "8276263",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/8276263727ad9128c371a3e85075852ad5374ee0",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "contact form added",
+    "date": "2026-04-02",
+    "time": "13:28:27",
+    "timezone": "-07:00",
+    "datetime": "2026-04-02T13:28:27-07:00",
+    "hourFrac": 13.466666666666667,
+    "totalLines": 7,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 7,
+        "deleted": 0,
+        "changedLines": 7
+      }
+    ]
+  },
+  {
+    "id": "da48d0da2dff86d4d18eb2b89922e35932ebef32",
+    "shortId": "da48d0d",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/da48d0da2dff86d4d18eb2b89922e35932ebef32",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "image fix",
+    "date": "2026-04-01",
+    "time": "21:43:10",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T21:43:10-07:00",
+    "hourFrac": 21.716666666666665,
+    "totalLines": 2,
+    "lines": [
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 2,
+        "deleted": 0,
+        "changedLines": 2
+      }
+    ]
+  },
+  {
+    "id": "898fc4a8deae6afa90004358274102d94e55a61a",
+    "shortId": "898fc4a",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/898fc4a8deae6afa90004358274102d94e55a61a",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "fixed nav links",
+    "date": "2026-04-01",
+    "time": "21:39:14",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T21:39:14-07:00",
+    "hourFrac": 21.65,
+    "totalLines": 47,
+    "lines": [
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 7,
+        "deleted": 7,
+        "changedLines": 14
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 7,
+        "deleted": 8,
+        "changedLines": 15
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 5,
+        "deleted": 5,
+        "changedLines": 10
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 7,
+        "deleted": 1,
+        "changedLines": 8
+      }
+    ]
+  },
+  {
+    "id": "5a07a1e3c160cc6c2d4ae38c4214da358374e595",
+    "shortId": "5a07a1e",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/5a07a1e3c160cc6c2d4ae38c4214da358374e595",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "image added",
+    "date": "2026-04-01",
+    "time": "21:33:15",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T21:33:15-07:00",
+    "hourFrac": 21.55,
+    "totalLines": 11,
+    "lines": [
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 10,
+        "deleted": 1,
+        "changedLines": 11
+      }
+    ]
+  },
+  {
+    "id": "a86e526eba4196cecc7f85a3797a7a5bcb831ab3",
+    "shortId": "a86e526",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/a86e526eba4196cecc7f85a3797a7a5bcb831ab3",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "navigation links added",
+    "date": "2026-04-01",
+    "time": "21:29:52",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T21:29:52-07:00",
+    "hourFrac": 21.483333333333334,
+    "totalLines": 47,
+    "lines": [
+      {
+        "file": ".DS_Store",
+        "type": "ds_store",
+        "added": 0,
+        "deleted": 0,
+        "changedLines": 0
+      },
+      {
+        "file": "contact/index.html",
+        "type": "html",
+        "added": 20,
+        "deleted": 0,
+        "changedLines": 20
+      },
+      {
+        "file": "images/nyc.JPG",
+        "type": "jpg",
+        "added": 0,
+        "deleted": 0,
+        "changedLines": 0
+      },
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 1,
+        "deleted": 0,
+        "changedLines": 1
+      },
+      {
+        "file": "projects/index.html",
+        "type": "html",
+        "added": 20,
+        "deleted": 0,
+        "changedLines": 20
+      },
+      {
+        "file": "style.css",
+        "type": "css",
+        "added": 6,
+        "deleted": 0,
+        "changedLines": 6
+      }
+    ]
+  },
+  {
+    "id": "e84b6b8567fb4098d761fffb9a2ea65e60f1c9fc",
+    "shortId": "e84b6b8",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/e84b6b8567fb4098d761fffb9a2ea65e60f1c9fc",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": " title and description",
+    "date": "2026-04-01",
+    "time": "20:59:33",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T20:59:33-07:00",
+    "hourFrac": 20.983333333333334,
+    "totalLines": 13,
+    "lines": [
+      {
+        "file": "index.html",
+        "type": "html",
+        "added": 13,
+        "deleted": 0,
+        "changedLines": 13
+      }
+    ]
+  },
+  {
+    "id": "4d9bed66a7fd8d187ac0174f420583e768459d78",
+    "shortId": "4d9bed6",
+    "url": "https://github.com/ishaantibdewal/dsc106_portfolio/commit/4d9bed66a7fd8d187ac0174f420583e768459d78",
+    "author": "ishaantibdewal",
+    "email": "itibdewal@ucsd.edu",
+    "message": "Initial commit",
+    "date": "2026-04-01",
+    "time": "20:52:35",
+    "timezone": "-07:00",
+    "datetime": "2026-04-01T20:52:35-07:00",
+    "hourFrac": 20.866666666666667,
+    "totalLines": 4,
+    "lines": [
+      {
+        "file": ".gitattributes",
+        "type": "gitattributes",
+        "added": 2,
+        "deleted": 0,
+        "changedLines": 2
+      },
+      {
+        "file": "README.md",
+        "type": "md",
+        "added": 2,
+        "deleted": 0,
+        "changedLines": 2
+      }
+    ]
+  }
+]

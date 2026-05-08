@@ -66,6 +66,89 @@ nav a:hover {
   font-size: 80%;
 }
 
+#chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-block: 1em 2em;
+}
+
+circle {
+  transition: 200ms;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+.gridlines line {
+  opacity: 0.28;
+  stroke-dasharray: 3 5;
+}
+
+.gridlines path {
+  display: none;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35em 0.75em;
+  margin: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt,
+dl.info dd {
+  margin: 0;
+}
+
+dl.info dt {
+  color: color-mix(in oklch, canvastext 55%, canvas);
+  font-weight: 700;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: 1;
+  max-width: min(22em, calc(100vw - 2em));
+  padding: 0.85em 1em;
+  border: 1px solid oklch(85% 3% 260 / 70%);
+  border-radius: 0.5rem;
+  background: color-mix(in oklch, canvas 90%, transparent);
+  box-shadow: 0 0.6em 1.8em oklch(0% 0 0 / 18%);
+  backdrop-filter: blur(0.4em);
+  pointer-events: none;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
 /* ---------- CONTACT FORM ---------- */
 input,
 textarea,
@@ -190,6 +273,113 @@ h1 {
 #profile-stats dd {
   grid-row: 2;
   font-size: 1.5rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 1.25em;
+  margin-block: 1em 2em;
+}
+
+.stat,
+.stats dt,
+.stats dd {
+  margin: 0;
+}
+
+.stats dt {
+  color: oklch(50% 4% 260);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stats dd {
+  margin-top: 0.25rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+.stats-summary {
+  margin-block: 2em;
+  padding: 1.5em;
+  border: 1px solid oklch(85% 3% 260);
+}
+
+.stats-summary h2 {
+  margin-block: 0 1em;
+  font-size: 2rem;
+}
+
+.stats-primary {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.stats-details {
+  margin-block: 1.5em 2em;
+}
+
+.stats-details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.stats-secondary {
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  gap: 1px;
+  border: 1px solid oklch(85% 3% 200);
+  background: oklch(85% 3% 200);
+}
+
+.stats-secondary .stat {
+  padding: 0.75em;
+  background: canvas;
+}
+
+.stats-secondary dd {
+  font-size: 1.1rem;
+}
+
+#selection-count {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#language-breakdown {
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 2em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  text-align: center;
+}
+
+#language-breakdown dt {
+  color: canvastext;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+#language-breakdown dd {
+  display: grid;
+  gap: 0.25em;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+@media (width <= 800px) {
+  .stats-primary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (width <= 500px) {
+  .stats-primary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats dd {
+    font-size: 2rem;
+  }
 }
 
 /* ---------- RESUME PAGE ---------- */

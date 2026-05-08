@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "generate-commits": "node meta/generate-commits.js"
+  },
+  "devDependencies": {
+    "elocuent": "^0.0.4"
+  }
+}

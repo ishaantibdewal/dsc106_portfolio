@@ -52,6 +52,7 @@ export function renderProjects(projects, containerElement, headingLevel = "h2") 
 const pages = [
   { url: "", title: "Home" },
   { url: "projects/", title: "Projects" },
+  { url: "meta/", title: "Meta" },
   { url: "contact/", title: "Contact" },
   { url: "https://github.com/ishaantibdewal", title: "GitHub" },
   { url: "portfolio.html", title: "Resume" }
