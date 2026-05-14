@@ -18,6 +18,19 @@ export async function fetchGitHubData(username) {
   return await fetchJSON(`https://api.github.com/users/${username}`);
 }
 
+const BASE_PATH =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "/"
+    : "/dsc106_portfolio/";
+
+function resolveSiteURL(url) {
+  if (!url || url.startsWith("http") || url.startsWith("/") || url.startsWith("#")) {
+    return url;
+  }
+
+  return BASE_PATH + url;
+}
+
 export function renderProjects(projects, containerElement, headingLevel = "h2") {
   if (!containerElement) {
     return;
@@ -37,12 +50,20 @@ export function renderProjects(projects, containerElement, headingLevel = "h2") 
 
   for (let project of projects) {
     let article = document.createElement("article");
+    let imageURL = resolveSiteURL(project.image ?? "");
+    let projectURL = resolveSiteURL(project.url ?? "");
+    let linkTarget = projectURL && new URL(projectURL, location.href).host !== location.host;
 
     article.innerHTML = `
       <${heading}>${project.title ?? "Untitled project"}</${heading}>
-      <img src="${project.image ?? ""}" alt="${project.title ?? "Project image"}">
+      <img src="${imageURL}" alt="${project.title ?? "Project image"}">
       <p>${project.description ?? ""}</p>
       <p class="project-year">${project.year ?? ""}</p>
+      ${
+        projectURL
+          ? `<a class="project-link" href="${projectURL}"${linkTarget ? ' target="_blank" rel="noopener noreferrer"' : ""}>View project</a>`
+          : ""
+      }
     `;
 
     containerElement.appendChild(article);
@@ -57,11 +78,6 @@ const pages = [
   { url: "https://github.com/ishaantibdewal", title: "GitHub" },
   { url: "portfolio.html", title: "Resume" }
 ];
-
-const BASE_PATH =
-  location.hostname === "localhost" || location.hostname === "127.0.0.1"
-    ? "/"
-    : "/dsc106_portfolio/";
 
 let nav = document.createElement("nav");
 document.body.prepend(nav);

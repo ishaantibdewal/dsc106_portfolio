@@ -217,7 +217,7 @@ h1 {
 .projects article {
   display: grid;
   grid-template-rows: subgrid;
-  grid-row: span 4;
+  grid-row: span 5;
   gap: 1em;
 }
 
@@ -244,6 +244,18 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.project-link {
+  justify-self: start;
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.project-link:hover {
+  text-decoration-thickness: 0.14em;
 }
 
 #profile-stats {

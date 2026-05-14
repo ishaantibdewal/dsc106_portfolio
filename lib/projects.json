@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikemaxxing",
+    "year": 2026,
+    "image": "bikemaxxing.png",
+    "description": "An interactive bike-share visualization that maps Boston station activity, routes, and time-based departure and arrival patterns.",
+    "url": "https://github.com/ishaantibdewal/bikemaxxing"
+  },
+  {
     "title": "DSC 106 Portfolio",
     "year": 2026,
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
