@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 
-<body>
+<body class="meta-page">
   <h1>Codebase Meta</h1>
   <p>
     This page will show statistics and visualizations about the code behind this portfolio,
@@ -18,10 +18,27 @@
   </p>
   <div id="stats"></div>
 
-  <h2>Commits by time of day</h2>
-  <div id="chart"></div>
-  <p id="selection-count">No commits selected</p>
-  <dl id="language-breakdown" class="stats"></dl>
+  <div id="scrolly-1">
+    <div id="scatter-story">
+      <p>Watch how the repository history builds up over time.</p>
+    </div>
+    <div id="scatter-plot">
+      <h2>Commits by time of day</h2>
+      <div id="chart"></div>
+      <p id="selection-count">No commits selected</p>
+      <dl id="language-breakdown" class="stats"></dl>
+    </div>
+  </div>
+
+  <div id="scrolly-2">
+    <div id="file-story">
+      <p>Follow how the largest files compete as the codebase grows.</p>
+    </div>
+    <div id="file-plot">
+      <h2>Files over time</h2>
+      <dl id="files"></dl>
+    </div>
+  </div>
   <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
     <dd>
@@ -32,7 +49,7 @@
     <dd id="commit-date"></dd>
 
     <dt>Time</dt>
-    <dd id="commit-time"></dd>
+    <dd id="commit-tooltip-time"></dd>
 
     <dt>Author</dt>
     <dd id="commit-author"></dd>

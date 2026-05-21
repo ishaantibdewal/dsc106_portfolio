@@ -1,4 +1,5 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
+import scrollama from "https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm";
 
 async function loadData() {
   const data = await d3.csv("loc.csv", (row) => ({
@@ -146,7 +147,7 @@ function renderCommitInfo(data, commits) {
 function renderTooltipContent(commit) {
   const link = document.getElementById("commit-link");
   const date = document.getElementById("commit-date");
-  const time = document.getElementById("commit-time");
+  const time = document.getElementById("commit-tooltip-time");
   const author = document.getElementById("commit-author");
   const lines = document.getElementById("commit-lines");
 
@@ -179,6 +180,9 @@ function updateTooltipPosition(event) {
   tooltip.style.top = `${event.clientY}px`;
 }
 
+let xScale;
+let yScale;
+
 function renderScatterPlot(
   commits,
   {
@@ -205,13 +209,13 @@ function renderScatterPlot(
     .attr("viewBox", `0 0 ${width} ${height}`)
     .style("overflow", "visible");
 
-  const xScale = d3
+  xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, (d) => d.datetime))
     .range([usableArea.left, usableArea.right])
     .nice();
 
-  const yScale = d3
+  yScale = d3
     .scaleLinear()
     .domain([0, 24])
     .range([usableArea.bottom, usableArea.top]);
@@ -252,11 +256,13 @@ function renderScatterPlot(
   svg
     .append("g")
     .attr("transform", `translate(0, ${usableArea.bottom})`)
+    .attr("class", "x-axis")
     .call(xAxis);
 
   svg
     .append("g")
     .attr("transform", `translate(${usableArea.left}, 0)`)
+    .attr("class", "y-axis")
     .call(yAxis);
 
   const dots = svg.append("g").attr("class", "dots");
@@ -343,7 +349,7 @@ function renderScatterPlot(
 
   dots
     .selectAll("circle")
-    .data(sortedCommits)
+    .data(sortedCommits, (d) => d.id)
     .join("circle")
     .attr("cx", (d) => xScale(d.datetime))
     .attr("cy", (d) => yScale(d.hourFrac))
@@ -367,6 +373,202 @@ function renderScatterPlot(
   createBrushSelector(svg);
 }
 
+function updateScatterPlot(
+  commits,
+  {
+    chartSelector = "#chart",
+    width = 1000,
+    height = 600,
+    margin = { top: 10, right: 10, bottom: 30, left: 20 },
+  } = {}
+) {
+  const usableArea = {
+    top: margin.top,
+    right: width - margin.right,
+    bottom: height - margin.bottom,
+    left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
+  };
+
+  const svg = d3.select(chartSelector).select("svg");
+
+  xScale = xScale
+    .domain(d3.extent(commits, (d) => d.datetime))
+    .range([usableArea.left, usableArea.right])
+    .nice();
+
+  const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+  const rScale = d3
+    .scaleSqrt()
+    .domain([minLines, maxLines])
+    .range([2, 30]);
+  const xAxis = d3.axisBottom(xScale);
+  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+
+  const xAxisGroup = svg.select("g.x-axis");
+  xAxisGroup.selectAll("*").remove();
+  xAxisGroup.call(xAxis);
+
+  const dots = svg.select("g.dots");
+  dots
+    .selectAll("circle")
+    .data(sortedCommits, (d) => d.id)
+    .join(
+      (enter) =>
+        enter
+          .append("circle")
+          .attr("fill", "steelblue")
+          .style("fill-opacity", 0.7)
+          .on("mouseenter", (event, commit) => {
+            d3.select(event.currentTarget).style("fill-opacity", 1);
+            renderTooltipContent(commit);
+            updateTooltipVisibility(true);
+            updateTooltipPosition(event);
+          })
+          .on("mousemove", (event) => {
+            updateTooltipPosition(event);
+          })
+          .on("mouseleave", (event) => {
+            d3.select(event.currentTarget).style("fill-opacity", 0.7);
+            updateTooltipVisibility(false);
+          }),
+      (update) => update,
+      (exit) => exit.remove()
+    )
+    .attr("cx", (d) => xScale(d.datetime))
+    .attr("cy", (d) => yScale(d.hourFrac))
+    .attr("r", (d) => rScale(d.totalLines));
+}
+
+function updateFileDisplay(commits) {
+  const lines = commits.flatMap((d) => d.lines);
+  const files = d3
+    .groups(lines, (d) => d.file)
+    .map(([name, lines]) => ({ name, lines }))
+    .sort((a, b) => b.lines.length - a.lines.length);
+  const colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+  const filesContainer = d3
+    .select("#files")
+    .selectAll("div")
+    .data(files, (d) => d.name)
+    .join((enter) =>
+      enter.append("div").call((div) => {
+        const dt = div.append("dt");
+        dt.append("code");
+        dt.append("small");
+        div.append("dd");
+      })
+    );
+
+  filesContainer.select("dt > code").text((d) => d.name);
+  filesContainer.select("dt > small").text((d) => `${d.lines.length} lines`);
+  filesContainer
+    .select("dd")
+    .selectAll("div")
+    .data((d) => d.lines, (d) => `${d.file}-${d.commit}-${d.line}`)
+    .join("div")
+    .attr("class", "loc")
+    .attr("style", (d) => `--color: ${colors(d.type)}`);
+}
+
+let commitMaxTime;
+let filteredCommits;
+
+function updateVisualizations(maxTime) {
+  commitMaxTime = maxTime;
+  filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
+  updateScatterPlot(filteredCommits);
+  updateFileDisplay(filteredCommits);
+}
+
+function renderCommitStory(selector, commits, description) {
+  d3.select(selector)
+    .selectAll(".step")
+    .data(commits, (d) => d.id)
+    .join("div")
+    .attr("class", "step")
+    .html(
+      (d, i) => `
+        On ${d.datetime.toLocaleString("en", {
+          dateStyle: "full",
+          timeStyle: "short",
+        })},
+        I made <a href="${d.url}" target="_blank" rel="noopener noreferrer">${
+          i > 0 ? "another commit" : "my first commit"
+        }</a>.
+        ${description(d)}
+        At this point, the codebase had ${filteredCommitCount(d)} commits in view.
+      `
+    );
+}
+
+function filteredCommitCount(commit) {
+  return commits.filter((d) => d.datetime <= commit.datetime).length;
+}
+
+function commitFileCount(commit) {
+  return d3.rollups(
+    commit.lines,
+    (D) => D.length,
+    (d) => d.file
+  ).length;
+}
+
+function scatterStepText(commit) {
+  return `I edited ${commit.totalLines} lines across ${commitFileCount(commit)} files.`;
+}
+
+function fileStepText(commit) {
+  const visibleLines = commits
+    .filter((d) => d.datetime <= commit.datetime)
+    .flatMap((d) => d.lines);
+  const largestFile = d3.greatest(
+    d3.groups(visibleLines, (d) => d.file),
+    (d) => d[1].length
+  );
+
+  return `The largest file was <code>${largestFile?.[0] ?? "none"}</code>, with ${
+    largestFile?.[1].length ?? 0
+  } visible lines.`;
+}
+
+function renderScatterStory(commits) {
+  renderCommitStory("#scatter-story", commits, scatterStepText);
+}
+
+function renderFileStory(commits) {
+  renderCommitStory("#file-story", commits, fileStepText);
+}
+
+function onStepEnter(response) {
+  updateVisualizations(response.element.__data__.datetime);
+}
+
+function initScrollytelling() {
+  const scroller1 = scrollama();
+  scroller1
+    .setup({
+      container: "#scrolly-1",
+      step: "#scrolly-1 .step",
+    })
+    .onStepEnter(onStepEnter);
+
+  const scroller2 = scrollama();
+  scroller2
+    .setup({
+      container: "#scrolly-2",
+      step: "#scrolly-2 .step",
+    })
+    .onStepEnter(onStepEnter);
+
+  window.addEventListener("resize", () => {
+    scroller1.resize();
+    scroller2.resize();
+  });
+}
+
 let data = await loadData();
 let commits;
 
@@ -376,5 +578,11 @@ try {
   commits = processCommits(data);
 }
 
-renderCommitInfo(data, commits);
-renderScatterPlot(commits);
+commits = d3.sort(commits, (d) => d.datetime);
+filteredCommits = commits;
+renderCommitInfo(data, filteredCommits);
+renderScatterPlot(filteredCommits);
+updateFileDisplay(filteredCommits);
+renderScatterStory(commits);
+renderFileStory(commits);
+initScrollytelling();
